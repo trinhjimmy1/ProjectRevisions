@@ -1,3 +1,7 @@
 React-Router-DOM
 
 rafce
+
+Cycle de vie des composant:
+
+Mounting, Update, Unmount

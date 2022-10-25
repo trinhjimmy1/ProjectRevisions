@@ -3,6 +3,7 @@ import Home from "./pages/Home.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import ArrayState from "./pages/ArrayState.jsx";
 import Users from "./pages/Users.jsx";
+import LifeCycles from "./pages/LifeCycles.jsx";
 function App() {
 
   return (
@@ -12,6 +13,7 @@ function App() {
               <Route path="/" element={<Home/>}/>
               <Route path="/arraystate" element={<ArrayState/>}/>
               <Route path="/users" element={<Users/>}/>
+              <Route path="/lifecycles" element={<LifeCycles/>}/>
           </Routes>
       </>
   )
