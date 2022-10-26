@@ -5,6 +5,8 @@ import ArrayState from "./pages/ArrayState.jsx";
 import Users from "./pages/Users.jsx";
 import LifeCycles from "./pages/LifeCycles.jsx";
 import Films from "./pages/Films.jsx";
+import LiftingStateUp from "./pages/LiftingStateUp.jsx";
+import Converter from "./pages/Converter.jsx";
 function App() {
 
   return (
@@ -16,6 +18,8 @@ function App() {
               <Route path="/users" element={<Users/>}/>
               <Route path="/lifecycles" element={<LifeCycles/>}/>
               <Route path="/films" element={<Films/>}/>
+              <Route path="/liftingstateup" element={<LiftingStateUp/>}/>
+              <Route path="/converter" element={<Converter/>}/>
           </Routes>
       </>
   )

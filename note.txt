@@ -5,3 +5,8 @@ rafce
 Cycle de vie des composant:
 
 Mounting, Update, Unmount
+
+Ne pas oublier quand on appel une méthode dans un component si jamais il y a un paramètre dans la méthode toujours utilisé une fonction anonyme
+
+Remonter de l'état:
+
