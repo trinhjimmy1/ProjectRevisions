@@ -18,7 +18,7 @@ const Home = () => {
     }
 
     const handleRemove = index => {
-        setTasks(item => item.filter((value, i) => i !== index ) )
+        setTasks(item => item.filter((value, i) => i !== index ))
     }
 
     const alphabeticalSort = (tasks) => {

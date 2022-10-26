@@ -1,22 +1,22 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
+
+export const randomColor = () => {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+const randomNumber = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
 
 function ArrayState() {
 
     const [rectangles, setRectangles] = useState([]);
     const [inputNumber, setInputNumber] = useState("");
-
-    const randomNumber = (min, max) => {
-        return Math.floor(Math.random() * (max - min + 1) + min)
-    }
-
-    function randomColor() {
-        let letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -36,10 +36,10 @@ function ArrayState() {
             <div className='container'>
                 <form onSubmit={handleSubmit}>
                     <label>Number of rectangle : </label>
-                    <input type="text" onChange={e => setInputNumber(e.target.value)} value={inputNumber} />
+                    <input type="text" onChange={e => setInputNumber(e.target.value)} value={inputNumber}/>
                     <button type='submit' className='add'>Generate</button>
                 </form>
-                <hr />
+                <hr/>
                 <div className='display'><span>Rectangles : </span>
                     {rectangles.map((rectangle, index) => (
                         <div key={index} style={rectangle}></div>
