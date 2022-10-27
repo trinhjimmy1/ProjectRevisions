@@ -7,6 +7,8 @@ import LifeCycles from "./pages/LifeCycles.jsx";
 import Films from "./pages/Films.jsx";
 import LiftingStateUp from "./pages/LiftingStateUp.jsx";
 import Converter from "./pages/Converter.jsx";
+import Slider from "./pages/Slider.jsx";
+import Borne from "./pages/Borne.jsx";
 function App() {
 
   return (
@@ -20,6 +22,8 @@ function App() {
               <Route path="/films" element={<Films/>}/>
               <Route path="/liftingstateup" element={<LiftingStateUp/>}/>
               <Route path="/converter" element={<Converter/>}/>
+              <Route path="/slider" element={<Slider/>}/>
+              <Route path="/borne" element={<Borne/>}/>
           </Routes>
       </>
   )

@@ -1,0 +1,22 @@
+.slider {
+    overflow-x: hidden;
+}
+
+.slider-view {
+    position: relative;
+}
+
+
+.view {
+    display: flex;
+    height: 60vh;
+    width: 500vw;
+}
+
+.view img {
+    border: 2px solid green;
+    justify-content: center;
+    object-fit: cover;
+    object-position: center;
+    margin: 10px;
+}

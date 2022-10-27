@@ -2,6 +2,11 @@ import React, {useEffect, useState} from 'react';
 import {randomNumber} from "../../utils/random.js";
 
 const DisplayConverter = ({values, setValues}) => {
+    //Autre façon de faire avec le useEffect pour changer la font
+    // const [fontSize, setFontSize] = useState();
+    // useEffect(() => {
+    //     setFontSize(randomNumber(14,25));
+    // }, [values])
 
     const deleteConvert = (index) => {
         setValues(item => item.filter((value, i) => i !== index ))
