@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {BorneContext} from "../context/BorneContext.js";
 
-const Meal = ({index, contents, setContents, shoppingCart, setShoppingCart}) => {
+const Meal = ({content}) => {
+    const {shoppingCart, setShoppingCart} = useContext(BorneContext);
 
-    const addProduct = (shoppingCart) => {
+    const addProduct = () => {
         setShoppingCart([...shoppingCart, {
-            title: contents.title,
-            amount: contents.amount
+            title: content.title,
+            amount: content.amount
         }]);
     };
 
@@ -13,8 +15,8 @@ const Meal = ({index, contents, setContents, shoppingCart, setShoppingCart}) => 
         <div>
           <h1>Meal</h1>
             <div>
-                <h1>{contents.title}</h1>
-                <p>Montant : {contents.amount}  €</p>
+                <h1>{content.title}</h1>
+                <p>Montant : {content.amount}  €</p>
                 <button onClick={addProduct} type='submit'>+</button>
             </div>
         </div>

@@ -9,6 +9,7 @@ import LiftingStateUp from "./pages/LiftingStateUp.jsx";
 import Converter from "./pages/Converter.jsx";
 import Slider from "./pages/Slider.jsx";
 import Borne from "./pages/Borne.jsx";
+import Students from "./pages/Students.jsx";
 function App() {
 
   return (
@@ -24,6 +25,7 @@ function App() {
               <Route path="/converter" element={<Converter/>}/>
               <Route path="/slider" element={<Slider/>}/>
               <Route path="/borne" element={<Borne/>}/>
+              <Route path="/students" element={<Students/>}/>
           </Routes>
       </>
   )

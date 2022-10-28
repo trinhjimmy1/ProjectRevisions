@@ -14,6 +14,7 @@ const Navbar = () => {
            <Link to="/converter">Converter</Link>
            <Link to="/slider">Slider</Link>
            <Link to="/borne">Borne</Link>
+           <Link to="/students">Students</Link>
         </div>
     );
 };

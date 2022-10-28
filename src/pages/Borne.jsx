@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Meals from "../components/Borne/Meals.jsx";
 import Cart from "../components/Borne/Cart.jsx";
+import {BorneContext} from "../components/context/BorneContext";
 
 const Borne = () => {
     const [contents, setContents] = useState([
@@ -14,23 +15,28 @@ const Borne = () => {
     const [shoppingCart, setShoppingCart] = useState([]);
     const [isLoad , setIsLoad] = useState(false);
 
-    console.log(shoppingCart);
     useEffect(() => {
         if(shoppingCart.length) {
             setIsLoad(true);
         }
     }, [shoppingCart]);
 
-    console.log(isLoad);
-
     return (
         <div>
-           <h1>Borne</h1>
-            <Meals contents={contents} setContents={setContents} shoppingCart={shoppingCart} setShoppingCart={setShoppingCart}/>
-            {
-                isLoad &&
-                <Cart shoppingCart={shoppingCart}/>
-            }
+            <BorneContext.Provider
+                value={{
+                       contents,
+                        setContents,
+                        shoppingCart,
+                        setShoppingCart
+                }}>
+                <h1>Borne</h1>
+                <Meals contents={contents}/>
+                {
+                    isLoad &&
+                    <Cart shoppingCart={shoppingCart}/>
+                }
+            </BorneContext.Provider>
         </div>
     );
 };
